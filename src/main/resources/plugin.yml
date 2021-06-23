@@ -1,0 +1,9 @@
+main: com.asheept.study.StudyPlugin
+version: 0.1
+name: Study
+api-version: 1.17
+depend: [Kotlin]
+
+commands:
+  test:
+    usage: /test <hello>
