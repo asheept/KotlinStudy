@@ -12,6 +12,7 @@ import org.bukkit.scheduler.BukkitRunnable
 class StudyPlugin : JavaPlugin(), Listener {
     override fun onEnable()
     {
+
         server.pluginManager.registerEvents(StudyListener(this), this)
         getCommand("test")?.setExecutor(StudyCommand(this))
 

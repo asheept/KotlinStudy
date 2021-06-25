@@ -4,4 +4,5 @@ object KommandStudy {
 
     private lateinit var  plugin: StudyPlugin
 
+
 }

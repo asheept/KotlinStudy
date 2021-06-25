@@ -51,7 +51,8 @@ class StudyListener(private val plugin: StudyPlugin): Listener
 
                     meta.setDisplayName("hello")
                     item.itemMeta = meta
-                    event.player.inventory.addItem(item)
+
+                    Bukkit.getOnlinePlayers().forEach { it.player?.inventory?.addItem(item) }
 
                     val title  = Title.title(
                         text("click clock").color(TextColor.color(0xB2F6F6)).decorate(TextDecoration.BOLD),
@@ -59,11 +60,9 @@ class StudyListener(private val plugin: StudyPlugin): Listener
                         Title.Times.of(Duration.of(1, ChronoUnit.MILLIS), Duration.of(5, ChronoUnit.SECONDS), Duration.of(1, ChronoUnit.SECONDS)))
 
                     Bukkit.getServer().showTitle(title)
-
                 }
             }
         }
-
     }
 
 }
